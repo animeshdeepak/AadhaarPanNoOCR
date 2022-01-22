@@ -26,9 +26,7 @@ fun String.validateAadhaarCard(): Boolean {
 
 //471931871578 without space in between
 fun String.validateAadhaarCardWithoutSpace(): Boolean {
-    // Regex to check valid PAN Card number.
     val regex =  "^[2-9][0-9]{3}[0-9]{4}[0-9]{4}$"
-    // Compile the ReGex
     val p: Pattern = Pattern.compile(regex)
     val m: Matcher = p.matcher(this)
 
