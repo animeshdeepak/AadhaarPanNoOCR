@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AadhaarPanNoOCR</string>
+    <string name="no_text_captured_yet">no text captured yet!</string>
+    <string name="todo">TODO</string>
 </resources>
