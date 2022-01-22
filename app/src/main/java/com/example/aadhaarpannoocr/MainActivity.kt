@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 val data: Intent? = result.data
                 val bitmap = data?.extras?.get("data") as Bitmap
+                viewModel.processText(bitmap)
             }
 
         setUpObserver()
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpObserver() {
         viewModel.text.observe(this) {
-            // TODO
+            binding.dataTv.text = it
         }
     }
 
